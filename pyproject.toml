@@ -1,0 +1,46 @@
+[project]
+name = "alpajudge"
+version = "1.0.0"
+description = "Inference package for AlpaJudge-RB and AlpaJudge-RF"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "NVIDIA Corporation" }]
+requires-python = "==3.12.*"
+dependencies = [
+  "accelerate>=1.12.0",
+  "huggingface-hub>=0.36.0",
+  "pillow>=12.0.0",
+  "torch==2.8.0",
+  "torchvision>=0.23.0",
+  "transformers==4.57.6",
+]
+
+[project.urls]
+Repository = "https://github.com/NVlabs/alpajudge"
+Weights = "https://huggingface.co/nvidia/alpajudge"
+
+[build-system]
+requires = ["uv_build>=0.9.7,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+  "ipykernel>=6.29.3",
+  "ipywidgets>=8.1.8",
+  "jupyterlab>=4.4.0",
+  "matplotlib>=3.10.7",
+  "nbclient>=0.10.2",
+  "nbformat>=5.10.4",
+  "numpy>=2.0.0",
+  "physical-ai-av>=0.2.0",
+  "pre-commit>=4.5.1",
+  "pytest>=8.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-p", "no:cacheprovider"]
