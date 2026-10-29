@@ -1,8 +1,8 @@
 # AlpaJudge
 
-Inference package for the reference-based and reference-free AlpaJudge checkpoints.
-The package contains the Hugging Face model classes, the exact scoring contracts, and small
-inference helpers. It does not include training code or data pipelines.
+NVIDIA AlpaJudge is a human-calibrated evaluation and reward model for autonomous driving. It scores causal driving explanations to assess reasoning quality, filter weak annotations, and reduce manual review of training data. It supports reference-based evaluation against labeled examples and reference-free evaluation using video and driving Meta-Actions. AlpaJudge is part of the NVIDIA Alpamayo open platform for autonomous vehicles.
+
+Inference package for the reference-based and reference-free AlpaJudge checkpoints. The package contains the Hugging Face model classes, the exact scoring contracts, and small inference helpers. It does not include training code or data pipelines.
 
 ## Table of Contents
 
